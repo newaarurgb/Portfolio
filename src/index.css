@@ -738,10 +738,10 @@ button {
 
   margin: 0;
 
-  font-size: clamp(58px, 7vw, 105px);
-  line-height: 0.88;
+  font-size: clamp(44px, 4.8vw, 70px);
+  line-height: 0.9;
 
-  letter-spacing: -5px;
+  letter-spacing: -3px;
   font-weight: 800;
 
   animation: fade-up var(--dur-slow) var(--ease-out-expo) both;
@@ -1264,10 +1264,11 @@ button {
     letter-spacing: 1.5px;
   }
 
-  .hero h1 {
-    font-size: clamp(48px, 15vw, 75px);
-    letter-spacing: -3px;
+  hero h1 {
+    font-size: clamp(34px, 10vw, 52px);
+    letter-spacing: -2px;
   }
+  
 
   .hero-role {
     flex-direction: column;
