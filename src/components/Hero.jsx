@@ -38,7 +38,7 @@ function Hero() {
             transition={{ delay: 0.2, duration: 0.6 }}
           >
             <span className="status-dot" />
-            AVAILABLE FOR OPPORTUNITIES
+            SEEKING FOR OPPORTUNITIES
           </motion.div>
 
           <motion.p
