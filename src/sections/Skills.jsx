@@ -12,27 +12,27 @@ const skillGroups = [
   {
     title: "Programming",
     icon: Code2,
-    skills: ["Python", "JavaScript", "SQL"],
+    skills: ["Python", "JavaScript", "SQL", "Java", "C", "C++"],
   },
   {
     title: "Frontend",
     icon: Globe,
-    skills: ["React.js", "HTML5", "CSS3", "Responsive Design"],
+    skills: [ "Javascript", React.js", "HTML5", "CSS3", "Vite"],
   },
   {
     title: "Backend",
     icon: Server,
-    skills: ["Django", "REST APIs", "Backend Development"],
+    skills: ["Django", "REST APIs", "Node.JS", "MongoDB"],
   },
   {
     title: "Database",
     icon: Database,
-    skills: ["MySQL", "SQL", "Database Design"],
+    skills: ["MySQL", "PostgreSQL", "MongoDB"],
   },
   {
     title: "Tools",
     icon: Wrench,
-    skills: ["Git", "GitHub", "VS Code"],
+    skills: ["Git", "GitHub", "VS Code", "Vercel"],
   },
 ];
 
