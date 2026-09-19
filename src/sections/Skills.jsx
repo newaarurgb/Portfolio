@@ -17,7 +17,7 @@ const skillGroups = [
   {
     title: "Frontend",
     icon: Globe,
-    skills: [ "Javascript", React.js", "HTML5", "CSS3", "Vite"],
+    skills: ["Javascript", React.js", "HTML5", "CSS3", "Vite"],
   },
   {
     title: "Backend",
