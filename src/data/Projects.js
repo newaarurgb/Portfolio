@@ -19,6 +19,16 @@ const projects = [
     github: "https://github.com/newaarurgb/aaru-react-project",
     live: "https://aaru-react-project.vercel.app/",
   },
+  {
+    id: 3,
+    title: "AARU Arena",
+    category: "REACT",
+    description:
+      "A real-time React survival game featuring dynamic enemy waves, combat mechanics, power-ups, player progression and multiplayer gameplay.\n\n**Game in Progress 🚧**\nMore features and improvements are currently in development.\nFor a trial, click the links below and explore the current version.",
+    tech: ["React.js", "JavaScript", "HTML5 Canvas", "WebSocket", "CSS"],
+    github: "https://github.com/newaarurgb/aaru-arena",
+    live: "https://aaru-arena1.vercel.app/",
+  },
 ];
 
 export default projects;
