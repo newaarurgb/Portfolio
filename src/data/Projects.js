@@ -29,6 +29,15 @@ const projects = [
     github: "https://github.com/newaarurgb/aaru-arena",
     live: "https://aaru-arena1.vercel.app/",
   },
+   {
+    id: 4,
+    title: "Learnova Learning Management System",
+    category: "Full Stack",
+    description:
+     "A full-stack Learning Management System (LMS) designed to provide an interactive online learning experience. Features include course management, student enrollment, structured learning content, and a user-friendly interface for accessing educational resources.\n\nProject Live 🚀\nBuilt using modern web technologies with a focus on scalable learning management and seamless user experience.\nExplore the live application through the link below.",
+    github: "https://github.com/newaarurgb/learnova",
+    live: "https://learnova-eight-sepia.vercel.app/",
+  },
 ];
 
 export default projects;
