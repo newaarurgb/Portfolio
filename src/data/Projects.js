@@ -21,10 +21,9 @@ const projects = [
     github: "https://github.com/newaarurgb/aaru-react-project",
     live: "https://aaru-react-project.vercel.app/",
   },
-<<<<<<< HEAD
-=======
 
->>>>>>> 71254db (changed portfolio)
+
+
   {
     id: 3,
     title: "AARU Arena",
@@ -35,12 +34,7 @@ const projects = [
     github: "https://github.com/newaarurgb/aaru-arena",
     live: "https://aaru-arena1.vercel.app/",
   },
-<<<<<<< HEAD
-  
-];
 
-export default projects;
-=======
    {
     id: 4,
     title: "Learnova Learning Management System",
@@ -54,4 +48,4 @@ export default projects;
 
 export default projects;
 
->>>>>>> 71254db (changed portfolio)
+
