@@ -6,7 +6,16 @@ import {
   Code2,
 } from "lucide-react";
 
-function ProjectCard({ project, index }) {
+function ProjectCard({ project, index = 0 }) {
+  // Prevent crashes if project data is missing or incomplete
+  if (!project || typeof project !== "object") {
+    return null;
+  }
+
+  const technologies = Array.isArray(project.tech)
+    ? project.tech
+    : [];
+
   return (
     <motion.article
       className="project-card"
@@ -49,18 +58,18 @@ function ProjectCard({ project, index }) {
         </motion.div>
 
         <div className="project-number">
-          0{index + 1}
+          {String(index + 1).padStart(2, "0")}
         </div>
 
         <div className="project-category">
-          {project.category}
+          {project.category || "PROJECT"}
         </div>
       </div>
 
       {/* Project Information */}
       <div className="project-info">
         <div className="project-title-row">
-          <h3>{project.title}</h3>
+          <h3>{project.title || "Untitled Project"}</h3>
 
           <motion.div
             className="project-arrow"
@@ -70,35 +79,45 @@ function ProjectCard({ project, index }) {
           </motion.div>
         </div>
 
-        <p>{project.description}</p>
+        <p>
+          {typeof project.description === "string"
+            ? project.description
+            : ""}
+        </p>
 
+        {/* Technologies */}
         <div className="project-tech">
-          {project.tech.map((tech) => (
-            <span key={tech}>
+          {technologies.map((tech, techIndex) => (
+            <span key={`${tech}-${techIndex}`}>
               <Layers size={13} />
               {tech}
             </span>
           ))}
         </div>
 
+        {/* Project Links */}
         <div className="project-links">
-          <a
-            href={project.github}
-            target="_blank"
-            rel="noreferrer"
-          >
-           <Code2 size={16} />
-           GitHub  
-          </a>
+          {project.github && (
+            <a
+              href={project.github}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Code2 size={16} />
+              GitHub
+            </a>
+          )}
 
-          <a
-            href={project.live}
-            target="_blank"
-            rel="noreferrer"
-          >
-            <ExternalLink size={16} />
-            Live Demo
-          </a>
+          {project.live && (
+            <a
+              href={project.live}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <ExternalLink size={16} />
+              Live Demo
+            </a>
+          )}
         </div>
       </div>
     </motion.article>

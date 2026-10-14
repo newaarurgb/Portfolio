@@ -1,3 +1,4 @@
+
 const projects = [
   {
     id: 1,
@@ -9,6 +10,7 @@ const projects = [
     github: "https://github.com/newaarurgb/StayEase",
     live: "#",
   },
+
   {
     id: 2,
     title: "AARU Blog",
@@ -19,6 +21,10 @@ const projects = [
     github: "https://github.com/newaarurgb/aaru-react-project",
     live: "https://aaru-react-project.vercel.app/",
   },
+<<<<<<< HEAD
+=======
+
+>>>>>>> 71254db (changed portfolio)
   {
     id: 3,
     title: "AARU Arena",
@@ -29,7 +35,23 @@ const projects = [
     github: "https://github.com/newaarurgb/aaru-arena",
     live: "https://aaru-arena1.vercel.app/",
   },
+<<<<<<< HEAD
   
 ];
 
 export default projects;
+=======
+   {
+    id: 4,
+    title: "Learnova Learning Management System",
+    category: "Full Stack",
+    description:
+     "A full-stack Learning Management System (LMS) designed to provide an interactive online learning experience. Features include course management, student enrollment, structured learning content, and a user-friendly interface for accessing educational resources.\n\nProject Live 🚀\nBuilt using modern web technologies with a focus on scalable learning management and seamless user experience.\nExplore the live application through the link below.",
+    github: "https://github.com/newaarurgb/learnova",
+    live: "https://learnova-eight-sepia.vercel.app/",
+  },
+];
+
+export default projects;
+
+>>>>>>> 71254db (changed portfolio)

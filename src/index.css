@@ -1263,12 +1263,18 @@ button {
     font-size: 8px;
     letter-spacing: 1.5px;
   }
+}
+
 
   hero h1 {
+
+  .hero h1 {
+ 
     font-size: clamp(34px, 10vw, 52px);
     letter-spacing: -2px;
   }
   
+
 
   .hero-role {
     flex-direction: column;
@@ -3663,131 +3669,110 @@ button {
 
 
 /* =========================================================
-   FULL STACK BACKGROUND — RESPONSIVE
+   FULL STACK ANIMATION - DESKTOP
 ========================================================= */
-
-.background-wrapper {
-  position: fixed;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  pointer-events: none;
-  z-index: 0;
-}
-
-/* Main flow container */
 
 .stack-animation {
   position: absolute;
-
   top: 50%;
-  right: clamp(3%, 7vw, 10%);
+  right: 5%;
 
-  width: clamp(280px, 30vw, 420px);
-  height: min(72vh, 680px);
+  width: 360px;
+  height: 620px;
 
   transform: translateY(-50%);
 
-  opacity: 0.65;
-}
+  opacity: 0.7;
 
-/* Connection line */
+  pointer-events: none;
+
+  z-index: 1;
+}
 
 .stack-line {
   position: absolute;
-
-  top: 5%;
-  bottom: 5%;
+  top: 8%;
+  bottom: 8%;
   left: 50%;
 
   width: 1px;
 
-  transform: translateX(-50%);
-
   background: linear-gradient(
     to bottom,
     transparent,
-    rgba(168, 85, 247, 0.25) 10%,
-    rgba(96, 165, 250, 0.3) 50%,
-    rgba(168, 85, 247, 0.25) 90%,
+    rgba(168, 85, 247, 0.45),
+    rgba(96, 165, 250, 0.4),
+    rgba(168, 85, 247, 0.45),
     transparent
   );
-}
 
-/* Nodes */
+  transform: translateX(-50%);
+}
 
 .stack-node {
   position: absolute;
 
   left: 50%;
 
-  width: clamp(150px, 16vw, 210px);
-
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 
-  padding: clamp(12px, 1.2vw, 18px);
+  width: 190px;
+  min-height: 70px;
 
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 16px 20px;
+
+  border: 1px solid rgba(168, 85, 247, 0.2);
+
   border-radius: 14px;
 
-  background: rgba(10, 10, 15, 0.3);
+  background: rgba(10, 10, 15, 0.55);
 
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
 
   transform: translateX(-50%);
 
   box-shadow:
-    0 10px 40px rgba(0, 0, 0, 0.2);
-}
+    0 10px 40px rgba(0, 0, 0, 0.25),
+    0 0 30px rgba(168, 85, 247, 0.04);
 
-/* Responsive node positions */
+  white-space: nowrap;
+}
 
 .node-react {
   top: 3%;
 }
 
 .node-api {
-  top: 31%;
+  top: 29%;
 }
 
 .node-backend {
-  top: 59%;
+  top: 55%;
 }
 
 .node-database {
-  top: 87%;
+  top: 81%;
 }
-
-/* Labels */
 
 .stack-node-type {
   margin-bottom: 5px;
 
-  font-size: clamp(8px, 0.7vw, 10px);
-
+  font-size: 9px;
   letter-spacing: 0.18em;
 
-  color: rgba(255, 255, 255, 0.3);
+  color: rgba(255, 255, 255, 0.35);
 }
 
 .stack-node-name {
-  font-size: clamp(11px, 0.9vw, 14px);
-
+  font-size: 13px;
   font-weight: 500;
 
-  letter-spacing: 0.04em;
-
-  text-align: center;
-
-  color: rgba(255, 255, 255, 0.75);
-
-  white-space: nowrap;
+  color: rgba(255, 255, 255, 0.85);
 }
-
-/* Node dots */
 
 .stack-node-dot {
   position: absolute;
@@ -3795,8 +3780,8 @@ button {
   left: 50%;
   bottom: -5px;
 
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
 
   border-radius: 50%;
 
@@ -3805,19 +3790,17 @@ button {
   transform: translateX(-50%);
 
   box-shadow:
-    0 0 10px rgba(168, 85, 247, 0.8),
-    0 0 25px rgba(168, 85, 247, 0.3);
+    0 0 10px rgba(168, 85, 247, 1),
+    0 0 25px rgba(168, 85, 247, 0.7);
 }
-
-/* Data packets */
 
 .data-packet {
   position: absolute;
 
   left: 50%;
 
-  width: 4px;
-  height: 4px;
+  width: 5px;
+  height: 5px;
 
   border-radius: 50%;
 
@@ -3827,86 +3810,190 @@ button {
 
   box-shadow:
     0 0 8px #a855f7,
-    0 0 18px rgba(168, 85, 247, 0.7);
+    0 0 20px rgba(168, 85, 247, 0.9);
+
+  z-index: 5;
 }
 
-/* =========================================================
-   LARGE LAPTOP / DESKTOP
-========================================================= */
-
-@media (min-width: 1200px) {
-  .stack-animation {
-    right: 8%;
-    width: 400px;
-    height: 680px;
-  }
-}
-
-/* =========================================================
-   LAPTOP
-========================================================= */
-
-@media (max-width: 1199px) and (min-width: 901px) {
-  .stack-animation {
-    right: 2%;
-    width: 330px;
-    height: 620px;
-
-    opacity: 0.5;
-  }
-}
-
-/* =========================================================
-   TABLET
-========================================================= */
-
-@media (max-width: 900px) and (min-width: 601px) {
-  .stack-animation {
-    right: -20px;
-
-    width: 300px;
-    height: 580px;
-
-    opacity: 0.3;
-  }
-
-  .stack-node {
-    width: 150px;
-  }
-}
 
 /* =========================================================
    MOBILE
 ========================================================= */
 
-@media (max-width: 600px) {
+@media (max-width: 767px) {
+
+  /*
+     IMPORTANT:
+     Keep background visible and above the
+     page background, but below text.
+  */
+
+  .background-wrapper {
+    z-index: 0;
+    display: block;
+  }
+
   .stack-animation {
-    top: 53%;
+    display: block !important;
 
-    right: -75px;
+    position: absolute;
 
-    width: 260px;
-    height: 520px;
+    top: 67%;
+    left: 50%;
+    right: auto;
 
-    opacity: 0.18;
+    width: 240px;
+    height: 430px;
 
-    transform: translateY(-50%);
+    transform:
+      translate(-50%, -50%)
+      scale(0.72);
+
+    transform-origin: center center;
+
+    opacity: 0.32;
+
+    visibility: visible !important;
   }
 
   .stack-node {
-    width: 135px;
+    display: flex !important;
+
+    width: 140px;
+
+    min-height: 55px;
 
     padding: 10px 8px;
 
-    border-radius: 11px;
-  }
+    background: rgba(8, 8, 14, 0.6);
 
-  .stack-node-type {
-    font-size: 7px;
+    border-color: rgba(168, 85, 247, 0.22);
   }
 
   .stack-node-name {
-    font-size: 10px;
+    font-size: 9px;
+
+    color: rgba(255, 255, 255, 0.85);
+  }
+
+  .stack-node-type {
+    font-size: 6px;
+  }
+
+  .stack-node-dot {
+    width: 7px;
+    height: 7px;
+  }
+
+  .data-packet {
+    display: block !important;
+
+    width: 4px;
+    height: 4px;
+  }
+}
+
+
+/* =========================================================
+   IPHONE / STANDARD PHONE
+========================================================= */
+
+@media (max-width: 480px) {
+
+  .stack-animation {
+    top: 69%;
+
+    left: 50%;
+    right: auto;
+
+    width: 230px;
+    height: 410px;
+
+    transform:
+      translate(-50%, -50%)
+      scale(0.68);
+
+    opacity: 0.28;
+  }
+}
+
+
+/* =========================================================
+   SMALL PHONE
+========================================================= */
+
+@media (max-width: 375px) {
+
+  .stack-animation {
+    top: 70%;
+
+    left: 50%;
+    right: auto;
+
+    width: 220px;
+    height: 395px;
+
+    transform:
+      translate(-50%, -50%)
+      scale(0.65);
+
+    opacity: 0.27;
+  }
+
+  .stack-node {
+    width: 130px;
+
+    min-height: 52px;
+
+    padding: 9px 7px;
+  }
+
+  .stack-node-name {
+    font-size: 8px;
+  }
+
+  .stack-node-type {
+    font-size: 5.5px;
+  }
+}
+
+
+/* =========================================================
+   320px
+========================================================= */
+
+@media (max-width: 320px) {
+
+  .stack-animation {
+    top: 71%;
+
+    left: 50%;
+    right: auto;
+
+    width: 210px;
+    height: 380px;
+
+    transform:
+      translate(-50%, -50%)
+      scale(0.61);
+
+    opacity: 0.25;
+  }
+
+  .stack-node {
+    width: 120px;
+
+    min-height: 48px;
+
+    padding: 8px 6px;
+  }
+
+  .stack-node-name {
+    font-size: 7px;
+  }
+
+  .stack-node-type {
+    font-size: 5px;
   }
 
   .stack-node-dot {
@@ -3915,25 +4002,54 @@ button {
   }
 }
 
+
 /* =========================================================
-   VERY SMALL PHONES
+   TINY PHONE
 ========================================================= */
 
-@media (max-width: 380px) {
+@media (max-width: 280px) {
+
   .stack-animation {
-    right: -95px;
+    top: 72%;
 
-    width: 230px;
-    height: 480px;
+    left: 50%;
+    right: auto;
 
-    opacity: 0.14;
+    width: 195px;
+    height: 355px;
+
+    transform:
+      translate(-50%, -50%)
+      scale(0.58);
+
+    opacity: 0.23;
   }
 
   .stack-node {
-    width: 120px;
+    width: 110px;
+
+    min-height: 43px;
+
+    padding: 7px 5px;
+
+    border-radius: 7px;
   }
 
   .stack-node-name {
-    font-size: 9px;
+    font-size: 6.5px;
+  }
+
+  .stack-node-type {
+    font-size: 4.5px;
+  }
+
+  .stack-node-dot {
+    width: 5px;
+    height: 5px;
+  }
+
+  .data-packet {
+    width: 3px;
+    height: 3px;
   }
 }
